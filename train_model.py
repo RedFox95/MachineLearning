@@ -11,3 +11,6 @@ y_train = train_df['risk']
 # Train a logistic regression model
 model = LogisticRegression()
 model.fit(X_train, y_train)
+
+model_filename = "financial_risk_model.pkl"
+joblib.dump(model, model_filename)
